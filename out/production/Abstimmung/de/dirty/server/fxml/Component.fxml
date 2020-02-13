@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox fx:id="box" maxHeight="60.0" onMouseEntered="#onEnter" onMouseExited="#onExit" prefHeight="60.0" prefWidth="800.0" style="-fx-background-color: FAFAFA;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.dirty.server.controller.ComponentController">
+  <opaqueInsets>
+    <Insets top="20.0" />
+  </opaqueInsets>
+  <Label fx:id="name" alignment="CENTER" prefHeight="60.0" prefWidth="509.0" style="-fx-background-color: transparent;" text="Thema" textFill="#747f8d">
+      <font>
+         <Font name="System Bold" size="25.0" />
+      </font></Label>
+   <Label prefHeight="66.0" prefWidth="140.0" text="     " visible="false" />
+   <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="49.0" prefWidth="155.0" style="-fx-background-color: FFFFFF;" text="Button" textFill="#747f8d">
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <HBox.margin>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </HBox.margin></Button>
+</HBox>

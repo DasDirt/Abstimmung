@@ -5,29 +5,35 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: E3E5E8;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.dirty.server.Controller">
-   <children>
-      <VBox fx:id="list" alignment="TOP_CENTER" layoutY="53.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" spacing="23.0" style="-fx-background-color: FAFAFA;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
-         <padding>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-         </padding></VBox>
-      <Button layoutX="14.0" layoutY="520.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="189.0" style="-fx-background-color: FAFAFA;" text="Thema Hinzufügen" textFill="#747f8d">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font></Button>
-      <Button fx:id="exit" layoutX="752.0" layoutY="10.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="42.0" style="-fx-background-color: FAFAFA;" text="X" textFill="#747f8d">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font></Button>
-      <Label layoutX="317.0" layoutY="9.0" prefHeight="39.0" prefWidth="166.0" text="Abstimmung" textFill="#747f8d">
-         <font>
-            <Font name="System Bold" size="27.0" />
-         </font>
-      </Label>
-      <Button fx:id="minimize" layoutX="708.0" layoutY="10.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="42.0" style="-fx-background-color: FAFAFA;" text="🗕" textFill="#747f8d">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
-      </Button>
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: E3E5E8;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.dirty.server.controller.Controller">
+
+  <ScrollPane hbarPolicy="NEVER" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: FAFAFA;" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="53.0">
+
+    <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+
+    <VBox fx:id="list" alignment="TOP_CENTER" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: FAFAFA;" />
+  </ScrollPane>
+
+  <Button layoutX="14.0" layoutY="520.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="189.0" style="-fx-background-color: FAFAFA;" text="Thema Hinzufügen" textFill="#747f8d">
+    <font>
+      <Font name="System Bold" size="16.0" />
+    </font>
+  </Button>
+  <Button fx:id="exit" layoutX="752.0" layoutY="10.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="42.0" style="-fx-background-color: FAFAFA;" text="X" textFill="#747f8d">
+    <font>
+      <Font name="System Bold" size="17.0" />
+    </font>
+  </Button>
+  <Label layoutX="317.0" layoutY="9.0" prefHeight="39.0" prefWidth="166.0" text="Abstimmung" textFill="#747f8d">
+    <font>
+      <Font name="System Bold" size="27.0" />
+    </font>
+  </Label>
+  <Button fx:id="minimize" layoutX="708.0" layoutY="10.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="42.0" style="-fx-background-color: FAFAFA;" text="🗕" textFill="#747f8d">
+    <font>
+      <Font name="System Bold" size="17.0" />
+    </font>
+  </Button>
 </AnchorPane>
