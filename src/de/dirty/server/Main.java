@@ -12,6 +12,8 @@ import javafx.stage.WindowEvent;
 public class Main extends Application {
   public static Main main;
   public static ServerBootstrap serverBootstrap;
+
+  public Scene scene;
   private Stage primaryStage;
   private double positionX;
   private double positionY;
@@ -34,7 +36,7 @@ public class Main extends Application {
     this.primaryStage = primaryStage;
     Parent root = FXMLLoader.load(getClass().getResource("fxml/Main.fxml"));
     primaryStage.setTitle("Hello World");
-    primaryStage.setScene(new Scene(root, 800, 600));
+    primaryStage.setScene(scene = new Scene(root, 800, 600));
 
     primaryStage.initStyle(StageStyle.UNDECORATED);
     primaryStage.setResizable(false);
@@ -90,5 +92,9 @@ public class Main extends Application {
   /** Returns the primary stage. */
   public Stage getPrimaryStage() {
     return primaryStage;
+  }
+
+  public Scene getScene() {
+    return scene;
   }
 }

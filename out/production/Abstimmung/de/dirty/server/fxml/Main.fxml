@@ -16,7 +16,7 @@
     <VBox fx:id="list" alignment="TOP_CENTER" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: FAFAFA;" />
   </ScrollPane>
 
-  <Button layoutX="14.0" layoutY="520.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="189.0" style="-fx-background-color: FAFAFA;" text="Thema Hinzufügen" textFill="#747f8d">
+  <Button fx:id="addBtn" layoutX="14.0" layoutY="520.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="189.0" style="-fx-background-color: FAFAFA;" text="Thema Hinzufügen" textFill="#747f8d">
     <font>
       <Font name="System Bold" size="16.0" />
     </font>

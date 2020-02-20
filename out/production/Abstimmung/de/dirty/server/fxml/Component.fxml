@@ -14,7 +14,7 @@
          <Font name="System Bold" size="25.0" />
       </font></Label>
    <Label prefHeight="66.0" prefWidth="140.0" text="     " visible="false" />
-   <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="49.0" prefWidth="155.0" style="-fx-background-color: FFFFFF;" text="Button" textFill="#747f8d">
+   <Button fx:id="removeBtn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="49.0" prefWidth="155.0" style="-fx-background-color: FFFFFF;" text="Entfernen" textFill="#747f8d">
       <opaqueInsets>
          <Insets />
       </opaqueInsets>

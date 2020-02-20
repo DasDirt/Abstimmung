@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: E3E5E8;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.dirty.server.controller.AddController">
+
+  <Button fx:id="okBtn" layoutX="400.0" layoutY="520.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="189.0" style="-fx-background-color: FAFAFA;" text="Ok" textFill="#747f8d">
+    <font>
+      <Font name="System Bold" size="16.0" />
+    </font>
+  </Button>
+  <Button fx:id="exit" layoutX="752.0" layoutY="10.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="42.0" style="-fx-background-color: FAFAFA;" text="X" textFill="#747f8d">
+    <font>
+      <Font name="System Bold" size="17.0" />
+    </font>
+  </Button>
+  <Label layoutX="178.0" layoutY="14.0" prefHeight="39.0" prefWidth="443.0" text="Abstimmung - Thema Hinzufügen" textFill="#747f8d">
+    <font>
+      <Font name="System Bold" size="27.0" />
+    </font>
+  </Label>
+  <Button fx:id="minimize" layoutX="708.0" layoutY="10.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="42.0" style="-fx-background-color: FAFAFA;" text="🗕" textFill="#747f8d">
+    <font>
+      <Font name="System Bold" size="17.0" />
+    </font>
+  </Button>
+   <Button fx:id="cancelBtn" layoutX="596.0" layoutY="520.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="189.0" style="-fx-background-color: FAFAFA;" text="Abrechen" textFill="#747f8d">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Button>
+   <TextField fx:id="nameField" layoutX="185.0" layoutY="127.0" prefHeight="46.0" prefWidth="591.0" style="-fx-background-color: FAFAFA; -fx-text-fill: 747f8d;" />
+   <Label layoutX="23.0" layoutY="130.0" prefHeight="39.0" prefWidth="118.0" text="Name:" textFill="#747f8d">
+      <font>
+         <Font name="System Bold" size="27.0" />
+      </font>
+   </Label>
+</AnchorPane>
