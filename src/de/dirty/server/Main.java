@@ -11,7 +11,6 @@ import javafx.stage.WindowEvent;
 
 public class Main extends Application {
   public static Main main;
-  public static ServerBootstrap serverBootstrap;
 
   public Scene scene;
   private Stage primaryStage;
@@ -22,13 +21,14 @@ public class Main extends Application {
       new Thread(
           () -> {
             System.out.println("Starting Server");
-            serverBootstrap = new ServerBootstrap(1337);
+              new ServerBootstrap(1337);
           });
 
   public Main() {
     main = this;
     System.out.println("Abstimmung by DasDirt");
     serverThread.setName("ServerThread");
+    serverThread.start();
   }
 
   @Override
@@ -65,28 +65,28 @@ public class Main extends Application {
 
   /** This method will be executed if the programm closes */
   public void close(WindowEvent event) {
-    System.out.println("Closing!\nShutdown Server.");
-    if (serverThread.isAlive()) {
-      serverBootstrap.disconnect();
-      try {
-        System.out.println("Wait for the server thread too close.");
-        serverThread.join();
-      } catch (InterruptedException e) {
-        e.printStackTrace();
-      }
-    }
-    System.out.println("Exit...");
-    System.exit(0);
+    new Thread(
+            () -> {
+              System.out.println("Closing!\nShutdown Server.");
+              if (serverThread.isAlive()) {
+                ServerBootstrap.serverBootstrap.disconnect();
+                try {
+                  serverThread.interrupt();
+                  System.out.println("Wait for the server thread too close.");
+                  serverThread.join();
+                } catch (InterruptedException e) {
+                  e.printStackTrace();
+                }
+              }
+              System.out.println("Exit...");
+              System.exit(0);
+            })
+        .start();
   }
 
   /** Returns the instance of the main class */
   public static Main getMain() {
     return main;
-  }
-
-  /** Returns the server bootstrap. */
-  public static ServerBootstrap getServerBootstrap() {
-    return serverBootstrap;
   }
 
   /** Returns the primary stage. */

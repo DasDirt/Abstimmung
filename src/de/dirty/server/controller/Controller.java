@@ -21,6 +21,7 @@ public class Controller implements Initializable {
   public static Controller controller;
 
   private Scene addScene;
+  private Scene nextScene;
 
   private HashMap<String, ComponentController> componentHashMap = new HashMap<>();
   private List<Component> components = new ArrayList<>();
@@ -31,7 +32,7 @@ public class Controller implements Initializable {
   @FXML private Button minimize;
   @FXML private Button addBtn;
 
-  @FXML private Button nextBtn; //todo add next page
+  @FXML private Button nextBtn; // todo add next page
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
@@ -40,6 +41,9 @@ public class Controller implements Initializable {
       addScene =
           new Scene(
               new FXMLLoader(getClass().getResource("../fxml/AddComponent.fxml")).load(), 800, 600);
+      nextScene =
+          new Scene(
+              new FXMLLoader(getClass().getResource("../fxml/Settings.fxml")).load(), 800, 600);
     } catch (IOException e) {
       e.printStackTrace();
     }
@@ -49,11 +53,17 @@ public class Controller implements Initializable {
 
     addBtn.setOnAction(event -> Main.getMain().getPrimaryStage().setScene(addScene));
 
-    // add some test fake Themes
-    for (int i = 0; i < 15; i++) {
-      System.out.println(i);
-      components.add(new Component("Test" + i));
-    }
+    nextBtn.setOnAction(
+        event -> {
+          if (components.size() > 1) {
+            Main.getMain().getPrimaryStage().setScene(nextScene);
+          }
+        });
+//    // add some test fake Themes
+//    for (int i = 0; i < 15; i++) {
+//      System.out.println(i);
+//      components.add(new Component("Test" + i));
+//    }
 
     for (Component component : components) {
       ComponentController.tmpName = component.getName();
@@ -90,6 +100,7 @@ public class Controller implements Initializable {
       componentHashMap.put(name, ComponentController.componentController);
       ComponentController.componentController = null;
     }
+    nextBtn.setDisable(false);
   }
 
   public void removeComponent(String name, Node node) {

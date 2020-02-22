@@ -7,6 +7,7 @@
 package de.dirty.server.netty.packet.handler;
 
 import de.dirty.server.Main;
+import de.dirty.server.netty.ServerBootstrap;
 import de.dirty.server.netty.packet.Packet;
 import de.dirty.server.netty.packet.packets.PacketStartConnection;
 import io.netty.channel.Channel;
@@ -31,6 +32,6 @@ public class PacketHandler extends SimpleChannelInboundHandler<Object> {
   }
 
   private void sendPacket(Channel channel, Packet packet) {
-    Main.getMain().getServerBootstrap().sendPacket(channel, packet);
+    ServerBootstrap.serverBootstrap.sendPacket(channel, packet);
   }
 }

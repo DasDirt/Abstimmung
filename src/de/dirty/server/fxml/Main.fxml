@@ -26,7 +26,7 @@
       <Font name="System Bold" size="17.0" />
     </font>
   </Button>
-  <Label layoutX="317.0" layoutY="9.0" prefHeight="39.0" prefWidth="166.0" text="Abstimmung" textFill="#747f8d">
+  <Label layoutX="327.0" layoutY="9.0" prefHeight="39.0" prefWidth="146.0" text="Zuordnung" textFill="#747f8d">
     <font>
       <Font name="System Bold" size="27.0" />
     </font>
@@ -36,7 +36,7 @@
       <Font name="System Bold" size="17.0" />
     </font>
   </Button>
-   <Button fx:id="nextBtn" layoutX="596.0" layoutY="520.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="189.0" style="-fx-background-color: FAFAFA;" text="Weiter" textFill="#747f8d">
+   <Button fx:id="nextBtn" disable="true" layoutX="596.0" layoutY="520.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="189.0" style="-fx-background-color: FAFAFA;" text="Weiter" textFill="#747f8d">
       <font>
          <Font name="System Bold" size="16.0" />
       </font>
